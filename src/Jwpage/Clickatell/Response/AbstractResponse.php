@@ -2,6 +2,8 @@
 
 namespace Jwpage\Clickatell\Response;
 
+use Jwpage\Clickatell\Error;
+
 abstract class AbstractResponse
 {
     protected $parsedResponse;
@@ -17,6 +19,13 @@ abstract class AbstractResponse
     {
         $response = $this->parsedResponse;
         return ($response[0][1] != 'ERR');
+    }
+
+    public function getError()
+    {
+        return $this->isSuccessful() 
+            ? false 
+            : new Error($this->parsedResponse[0][2]);
     }
 
     protected function parseBody($body)

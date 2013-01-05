@@ -16,6 +16,14 @@ class SendMsg extends AbstractResponse
         return true;
     }
 
+    public function getError()
+    {
+        throw new \BadMethodCallException(trim('
+            Use getMessageIds instead.
+        '));
+
+    }
+
     // alias for getMessageIds
     public function getMessageId()
     {
