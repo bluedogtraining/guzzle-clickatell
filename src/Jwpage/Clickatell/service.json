@@ -1,0 +1,151 @@
+{
+    "name": "HTTP API Clickatell",
+    "apiVersion": "2.4.6",
+    "operations": {
+        "Auth": {
+            "httpMethod": "POST",
+            "uri": "/http/auth",
+            "class": "\\Jwpage\\Clickatell\\Command",
+            "summary": "Authenticate on the API",
+        },
+        "Ping": {
+            "httpMethod": "POST",
+            "uri": "/http/ping",
+            "class": "\\Jwpage\\Clickatell\\Command",
+            "summary": "Ping the API",
+            "parameters": {
+                "session_id": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": false
+                }
+            }
+        },
+        "QueryMsg": {
+            "httpMethod": "POST",
+            "uri": "/http/querymsg",
+            "class": "\\Jwpage\\Clickatell\\Command",
+            "summary": "Query the status of a message",
+            "parameters": {
+                "session_id": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": false
+                },
+                "apimsgid": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                }
+            }
+        },
+        "SendMsg": {
+            "httpMethod": "POST",
+            "uri": "/http/sendmsg",
+            "class": "\\Jwpage\\Clickatell\\Command",
+            "summary": "Send a SMS message",
+            "parameters": {
+                "to": {
+                    "location": "postField",
+                    "type": ["integer", "array"],
+                    "required": true
+                },
+                "text": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },
+                "from": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": false
+                },
+                "session_id": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": false
+                },
+                "callback": {
+                    "location": "postField",
+                    "type": "integer",
+                    "required": false
+                },
+                "deliv_time": {
+                    "location": "postField",
+                    "type": "integer",
+                    "required": false
+                },
+                "concat": {
+                    "location": "postField",
+                    "type": "integer",
+                    "required": false
+                },
+                "max_credits": {
+                    "location": "postField",
+                    "type": "number",
+                    "required": false
+                },
+                "req_feat": {
+                    "location": "postField",
+                    "type": "number",
+                    "required": false
+                },
+                "queue": {
+                    "location": "postField",
+                    "type": "integer",
+                    "required": false
+                },
+                "escalate": {
+                    "location": "postField",
+                    "type": "integer",
+                    "required": false
+                },
+                "mo": {
+                    "location": "postField",
+                    "type": "integer",
+                    "required": false
+                },
+                "cliMsgId": {
+                    "location": "postField",
+                    "type": "string",
+                    "reqiured": false
+                },
+                "unicode": {
+                    "location": "postField",
+                    "type": "integer",
+                    "required": false
+                },
+                "msg_type": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": false
+                },
+                "udh": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": false
+                },
+                "data": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": false
+                },
+                "validity": {
+                    "location": "postField",
+                    "type": "integer",
+                    "required": false
+                },
+                "binary": {
+                    "location": "postField",
+                    "type": "integer",
+                    "required": false
+                },
+                "scheduled_time": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": false
+                }
+            }
+        }
+    }
+}
