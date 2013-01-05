@@ -15,6 +15,16 @@ abstract class AbstractResponse
         $this->parsedResponse = $this->parseBody($request->getResponse()->getBody());
     }
 
+    public function getRequest()
+    {
+        return $this->request;
+    }
+
+    public function getResponse()
+    {
+        return $this->request->getResponse();
+    }
+
     public function isSuccessful()
     {
         $response = $this->parsedResponse;

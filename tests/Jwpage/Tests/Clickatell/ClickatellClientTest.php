@@ -22,6 +22,8 @@ class ClickatellClientTest extends GuzzleTestCase
         $this->setMockResponse($this->client, 'auth_success.txt');
         $response = $this->client->getCommand('Auth')->execute();
         $this->assertTrue($response->isSuccessful());
+        $this->assertInstanceOf('\\Guzzle\\Http\\Message\\Request', $response->getRequest());
+        $this->assertInstanceOf('\\Guzzle\\Http\\Message\\Response', $response->getResponse());
         $this->assertEquals('foo', $response->getSessionId());
     }
 
