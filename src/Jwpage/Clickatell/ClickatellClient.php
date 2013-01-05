@@ -13,7 +13,7 @@ class ClickatellClient extends Client
         $default = array(
             'base_url' => 'http://api.clickatell.com/',
         );
-        $required = array('api_id', 'username', 'password', 'base_url');
+        $required = array('api_id', 'user', 'password', 'base_url');
         $config = Collection::fromConfig($config, $default, $required);
         $description = ServiceDescription::factory(__DIR__.'/service.json');
 
@@ -21,5 +21,17 @@ class ClickatellClient extends Client
         $client->setDescription($description);
 
         return $client;
+    }
+
+    public function createRequest($method = RequestInterface::GET, $uri = null, $headers = null, $body = null)
+    {
+        $request = parent::createRequest($method, $uri, $headers, $body);
+
+        if (!$request->getPostField("session_id")) {
+            $config = $this->getConfig();
+            $request->addPostFields($config->getAll(array('api_id', 'user', 'password')));
+        }
+
+        return $request;
     }
 }
