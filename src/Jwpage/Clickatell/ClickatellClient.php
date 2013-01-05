@@ -34,4 +34,12 @@ class ClickatellClient extends Client
 
         return $request;
     }
+
+    public static function csv($value)
+    {
+        if (is_array($value)) {
+            $value = implode(',', $value);
+        }
+        return $value;
+    }
 }

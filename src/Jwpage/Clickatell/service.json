@@ -51,8 +51,9 @@
             "parameters": {
                 "to": {
                     "location": "postField",
-                    "type": ["integer", "array"],
-                    "required": true
+                    "type": ["string", "array"],
+                    "required": true,
+                    "filters": ["\\Jwpage\\Clickatell\\ClickatellClient::csv"]
                 },
                 "text": {
                     "location": "postField",
