@@ -5,21 +5,23 @@ namespace Jwpage\Clickatell\Response;
 abstract class AbstractResponse
 {
     protected $parsedResponse;
+    protected $request;
 
-    public function __construct($response)
+    public function __construct($request)
     {
-        $this->parsedResponse = $this->parseBody($response->getBody());
+        $this->request = $request;
+        $this->parsedResponse = $this->parseBody($request->getResponse()->getBody());
     }
 
     public function isSuccessful()
     {
         $response = $this->parsedResponse;
-        return ($response[1] != 'ERR');
+        return ($response[0][1] != 'ERR');
     }
 
     protected function parseBody($body)
     {
-        preg_match('/(OK|ID|ERR):\s?(.*?)$/', $body, $matches);
+        preg_match_all('/(OK|ID|ERR):\s?(.*?)$/m', $body, $matches, PREG_SET_ORDER);
         return $matches;
     }
 }

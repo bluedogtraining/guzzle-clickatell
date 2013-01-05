@@ -13,7 +13,7 @@ class Command extends OperationCommand
 
         $this->result = $this->get(self::RESPONSE_PROCESSING) == self::TYPE_RAW 
             ? $this->request->getResponse()
-            : new $class($this->request->getResponse());
+            : new $class($this->request);
     }
 
 }
