@@ -4,5 +4,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-0": { "Jwpage": "src/" }
     }
 }
