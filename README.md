@@ -1,6 +1,6 @@
 # guzzle-clickatell 
 
-A PHP 5.3+ cient for interacting with the Clickatell HTTP API.
+A PHP 5.3+ client for interacting with the Clickatell HTTP API.
 
 ## Installation
 
