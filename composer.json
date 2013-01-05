@@ -1,4 +1,18 @@
 {
+    "name": "jwpage/guzzle-clickatell",
+    "description": "A Guzzle client for interacting with the Clickatell API",
+    "type": "library",
+    "keywords": [
+        "clickatell", "sms", "guzzle"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Johnson Page",
+            "email": "jwpage@gmail.com",
+            "homepage": "http://johnsonpage.org"
+        }
+    ],
     "require": {
         "guzzle/guzzle": "3.0.*"
     },
@@ -6,6 +20,6 @@
         "phpunit/phpunit": "*"
     },
     "autoload": {
-        "psr-0": { "Jwpage": "src/" }
+        "psr-0": { "Jwpage\\Clickatell": "src/" }
     }
 }
