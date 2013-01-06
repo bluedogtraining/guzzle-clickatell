@@ -25,6 +25,7 @@ abstract class AbstractResponse
      *
      * @param \Guzzle\Http\Message\RequestInterface $request The request object 
      * associated with the response.
+     * @throws \UnexpectedValueException when the request does not have a response.
      */
     public function __construct($request)
     {
