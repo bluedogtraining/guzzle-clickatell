@@ -11,38 +11,48 @@ Add this to your composer.json by running
 
 ### Create API client
 
-    $client = \Jwpage\Clickatell\ClickatellClient::factory(array(
-        'api_id'   => $apiId,
-        'user'     => $user,
-        'password' => $password,
-    ));
+```php
+$client = \Jwpage\Clickatell\ClickatellClient::factory(array(
+    'api_id'   => $apiId,
+    'user'     => $user,
+    'password' => $password,
+));
+```
 
 ### Authenticate to the API
 
-    $client->getCommand('Auth')->execute()->getSessionId();
+```php
+$client->getCommand('Auth')->execute()->getSessionId();
+```
 
 ### Ping the API to keep the session ID alive
 
-    $client->getCommand('Ping', array('session_id' => $sessionId))->execute();
+```php
+$client->getCommand('Ping', array('session_id' => $sessionId))->execute();
+```
 
 ### Send a message
 
 Passing a `session_id` parameter is optional. If it isn't present the client
 will use the authentication details provided.
 
-    $result = $client->getCommand('SendMsg', array(
-        'to'   => $mobileNumber,
-        'text' => $messageContents,
-    ))->execute();
+```php
+$result = $client->getCommand('SendMsg', array(
+    'to'   => $mobileNumber,
+    'text' => $messageContents,
+))->execute();
 
-    $result->isSuccessful();  // true
-    $result->getMessageIds(); // array('mobile_number' => 'message_id')
+$result->isSuccessful();  // true
+$result->getMessageIds(); // array('mobile_number' => 'message_id')
+```
 
 ### Query a message
 
-    $client->getCommand('QueryMsg', array(
-        'apimsgid' => $messageId,
-    ))->execute()->getStatus();
+```php
+$client->getCommand('QueryMsg', array(
+    'apimsgid' => $messageId,
+))->execute()->getStatus();
+```
 
 ## Running Tests
 
