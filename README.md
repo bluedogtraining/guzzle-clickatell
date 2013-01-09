@@ -1,5 +1,7 @@
 # guzzle-clickatell 
 
+[![Build Status](https://travis-ci.org/jwpage/guzzle-clickatell.png)](https://travis-ci.org/jwpage/guzzle-clickatell)
+
 A PHP 5.3+ client for interacting with the Clickatell HTTP API.
 
 ## Installation
