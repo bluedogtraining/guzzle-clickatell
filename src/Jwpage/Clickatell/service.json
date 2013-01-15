@@ -45,15 +45,14 @@
         "SendMsg": {
             "httpMethod": "POST",
             "uri": "/http/sendmsg",
-            "class": "\\Jwpage\\Clickatell\\Command",
+            "class": "\\Jwpage\\Clickatell\\Command\\Send",
             "responseClass": "\\Jwpage\\Clickatell\\Response\\SendMsg",
             "summary": "Send a SMS message",
             "parameters": {
                 "to": {
                     "location": "postField",
                     "type": ["string", "array"],
-                    "required": true,
-                    "filters": ["\\Jwpage\\Clickatell\\ClickatellClient::csv"]
+                    "required": true
                 },
                 "text": {
                     "location": "postField",

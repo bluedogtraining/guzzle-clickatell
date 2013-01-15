@@ -55,18 +55,4 @@ class ClickatellClient extends Client
 
         return $request;
     }
-
-    /**
-     * Static method to transform an array into a comma-separated string. 
-     * 
-     * @param string|array $value one or more items
-     * @return string comma-separated string
-     */
-    public static function csv($value)
-    {
-        if (is_array($value)) {
-            $value = implode(',', $value);
-        }
-        return $value;
-    }
 }
