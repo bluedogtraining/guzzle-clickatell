@@ -55,4 +55,19 @@ class ClickatellClient extends Client
 
         return $request;
     }
+
+    /**
+     * Syntactic sugar for simply sending a message. 
+     * 
+     * @param integer $to 
+     * @param string $message 
+     * @return boolean
+     */
+    public function sendMessage($to, $message)
+    {
+        return $this->getCommand('SendMsg', array(
+            'to'      => $to,
+            'text' => $message,
+        ))->execute()->isSuccessful();
+    }
 }

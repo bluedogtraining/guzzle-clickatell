@@ -114,6 +114,18 @@ class ClickatellClientTest extends GuzzleTestCase
         $this->assertFalse($response->getStatus());
     }
 
+    public function testSend()
+    {
+        $this->setMockResponse($this->client, 'sendmsg_success.txt');
+        $this->assertTrue($this->client->sendMessage('0400000000', 'test'));
+    }
+
+    public function testSendFail()
+    {
+        $this->setMockResponse($this->client, 'auth_failure.txt');
+        $this->assertFalse($this->client->sendMessage('0400000000', 'test'));
+    }
+
     /**
      * @expectedException BadMethodCallException
      */
