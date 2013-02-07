@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "guzzle/guzzle": ">=3.0,<3.2"
+        "guzzle/guzzle": ">=3.0@stable,<3.2@stable"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
