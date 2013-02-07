@@ -48,6 +48,12 @@ $result->isSuccessful();  // true
 $result->getMessageIds(); // array('mobile_number' => 'message_id')
 ```
 
+A quicker way to send a message is:
+
+```php
+$result = $client->sendMessage($mobileNumber, $messageContents); // true|false
+```
+
 ### Query a message
 
 ```php
