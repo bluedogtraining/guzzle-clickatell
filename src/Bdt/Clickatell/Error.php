@@ -1,6 +1,6 @@
 <?php
 
-namespace Jwpage\Clickatell;
+namespace Bdt\Clickatell;
 
 /**
  * Class to represent an error returned from the Clicaktell API.

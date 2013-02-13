@@ -1,6 +1,6 @@
 <?php
 
-namespace Jwpage\Clickatell;
+namespace Bdt\Clickatell;
 
 use Guzzle\Common\Collection;
 use Guzzle\Service\Client;

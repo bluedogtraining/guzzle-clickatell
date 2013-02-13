@@ -1,8 +1,8 @@
 <?php
 
-namespace Jwpage\Clickatell\Response;
+namespace Bdt\Clickatell\Response;
 
-use Jwpage\Clickatell\Error;
+use Bdt\Clickatell\Error;
 
 /**
  * Class to represent responses returned from the Clickatell API.

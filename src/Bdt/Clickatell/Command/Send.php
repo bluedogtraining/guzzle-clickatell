@@ -1,8 +1,8 @@
 <?php
 
-namespace Jwpage\Clickatell\Command;
+namespace Bdt\Clickatell\Command;
 
-use Jwpage\Clickatell\Command;
+use Bdt\Clickatell\Command;
 use Guzzle\Service\Description\OperationInterface;
 
 class Send extends Command

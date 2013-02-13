@@ -1,6 +1,6 @@
 <?php
 
-namespace Jwpage\Clickatell\Response;
+namespace Bdt\Clickatell\Response;
 
 /**
  * Response from the Ping command.

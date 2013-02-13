@@ -1,8 +1,8 @@
 <?php
 
-namespace Jwpage\Test\Clickatell;
+namespace Bdt\Test\Clickatell;
 
-use Jwpage\Clickatell\ClickatellClient;
+use Bdt\Clickatell\ClickatellClient;
 use Guzzle\Tests\GuzzleTestCase;
 use Guzzle\Plugin\Log\LogPlugin;
 
@@ -77,7 +77,7 @@ class ClickatellClientTest extends GuzzleTestCase
 
         $result = $response->getMessageIds();
         $this->assertFalse($response->isSuccessful());
-        $this->assertInstanceOf('\Jwpage\Clickatell\Error', $result['0400000001']);
+        $this->assertInstanceOf('\Bdt\Clickatell\Error', $result['0400000001']);
     }
 
     public function testSendMsgMultiple()

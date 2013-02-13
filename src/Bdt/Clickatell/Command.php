@@ -1,6 +1,6 @@
 <?php
 
-namespace Jwpage\Clickatell;
+namespace Bdt\Clickatell;
 
 use Guzzle\Service\Command\OperationCommand;
 
@@ -12,7 +12,7 @@ class Command extends OperationCommand
     /**
      * Creates a Clickatell Response after the request has been completed.
      * 
-     * @return \Jwpage\Clickatell\Response\AbstractResponse
+     * @return \Bdt\Clickatell\Response\AbstractResponse
      */
     protected function process()
     {

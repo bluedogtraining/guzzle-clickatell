@@ -1,5 +1,5 @@
 {
-    "name": "jwpage/guzzle-clickatell",
+    "name": "bluedogtraining/guzzle-clickatell",
     "description": "A Guzzle client for interacting with the Clickatell API",
     "type": "library",
     "keywords": [
@@ -9,8 +9,8 @@
     "authors": [
         {
             "name": "Johnson Page",
-            "email": "jwpage@gmail.com",
-            "homepage": "http://johnsonpage.org"
+            "email": "tech@bluedogtraining.com.au",
+            "homepage": "http://bluedogtraining.com.au"
         }
     ],
     "require": {
@@ -20,6 +20,6 @@
         "phpunit/phpunit": "*"
     },
     "autoload": {
-        "psr-0": { "Jwpage\\Clickatell": "src/" }
+        "psr-0": { "Bdt\\Clickatell": "src/" }
     }
 }

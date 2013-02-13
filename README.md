@@ -1,20 +1,20 @@
 # guzzle-clickatell 
 
-[![Build Status](https://travis-ci.org/jwpage/guzzle-clickatell.png)](https://travis-ci.org/jwpage/guzzle-clickatell)
+[![Build Status](https://travis-ci.org/bluedogtraining/guzzle-clickatell.png)](https://travis-ci.org/bluedogtraining/guzzle-clickatell)
 
 A PHP 5.3+ client for interacting with the Clickatell HTTP API.
 
 ## Installation
 
 Add this to your composer.json by running 
-`composer.phar require jwpage/guzzle-clickatell`.
+`composer.phar require bluedogtraining/guzzle-clickatell`.
 
 ## Usage
 
 ### Create API client
 
 ```php
-$client = \Jwpage\Clickatell\ClickatellClient::factory(array(
+$client = \Bdt\Clickatell\ClickatellClient::factory(array(
     'api_id'   => $apiId,
     'user'     => $user,
     'password' => $password,

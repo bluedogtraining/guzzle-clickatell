@@ -5,15 +5,15 @@
         "Auth": {
             "httpMethod": "POST",
             "uri": "/http/auth",
-            "class": "\\Jwpage\\Clickatell\\Command",
-            "responseClass": "\\Jwpage\\Clickatell\\Response\\Auth",
+            "class": "\\Bdt\\Clickatell\\Command",
+            "responseClass": "\\Bdt\\Clickatell\\Response\\Auth",
             "summary": "Authenticate on the API"
         },
         "Ping": {
             "httpMethod": "POST",
             "uri": "/http/ping",
-            "class": "\\Jwpage\\Clickatell\\Command",
-            "responseClass": "\\Jwpage\\Clickatell\\Response\\Ping",
+            "class": "\\Bdt\\Clickatell\\Command",
+            "responseClass": "\\Bdt\\Clickatell\\Response\\Ping",
             "summary": "Ping the API",
             "parameters": {
                 "session_id": {
@@ -26,8 +26,8 @@
         "QueryMsg": {
             "httpMethod": "POST",
             "uri": "/http/querymsg",
-            "class": "\\Jwpage\\Clickatell\\Command",
-            "responseClass": "\\Jwpage\\Clickatell\\Response\\QueryMsg",
+            "class": "\\Bdt\\Clickatell\\Command",
+            "responseClass": "\\Bdt\\Clickatell\\Response\\QueryMsg",
             "summary": "Query the status of a message",
             "parameters": {
                 "session_id": {
@@ -45,8 +45,8 @@
         "SendMsg": {
             "httpMethod": "POST",
             "uri": "/http/sendmsg",
-            "class": "\\Jwpage\\Clickatell\\Command\\Send",
-            "responseClass": "\\Jwpage\\Clickatell\\Response\\SendMsg",
+            "class": "\\Bdt\\Clickatell\\Command\\Send",
+            "responseClass": "\\Bdt\\Clickatell\\Response\\SendMsg",
             "summary": "Send a SMS message",
             "parameters": {
                 "to": {
