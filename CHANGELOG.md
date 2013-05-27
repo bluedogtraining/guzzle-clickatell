@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+* 2.0.3 (2013-05-28)
+    * Support Guzzle 3.5.0
+
 * 2.0.2 (2013-04-15)
     * Support Guzzle 3.4.0
 
