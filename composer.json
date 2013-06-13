@@ -21,5 +21,10 @@
     },
     "autoload": {
         "psr-0": { "Bdt\\Clickatell": "src/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
     }
 }
