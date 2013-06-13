@@ -44,9 +44,9 @@ class ClickatellClient extends Client
      * Also includes the `api_id`, `user`, and `password` in the request if 
      * `session_id` has not been provided in the request.
      */
-    public function createRequest($method = RequestInterface::GET, $uri = null, $headers = null, $body = null)
+    public function createRequest($method = RequestInterface::GET, $uri = null, $headers = null, $body = null, array $options = array())
     {
-        $request = parent::createRequest($method, $uri, $headers, $body);
+        $request = parent::createRequest($method, $uri, $headers, $body, $options);
 
         if (!$request->getPostField("session_id")) {
             $config = $this->getConfig();
