@@ -51,7 +51,10 @@ class SendMsg extends AbstractResponse
      */
     public function getMessageIds()
     {
-        $toNumbers = explode(',', $this->request->getPostField('to'));
+        $toNumbers = $this->request->getPostField('to');
+        if (!is_array($toNumbers)) {
+            $toNumbers = explode(',', $this->request->getPostField('to'));
+        }
         $result = array();
         foreach ($this->parsedResponse as $key => $line) {
             if ($line[1] == 'ERR') {
