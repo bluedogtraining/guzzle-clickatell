@@ -60,7 +60,7 @@ class SendMsg extends AbstractResponse
             if ($line[1] == 'ERR') {
                 $item = new Error($line[2]);
             } else {
-                preg_match('/^(.*?)\s/', $line[2], $matches);
+                preg_match('/^([0-9a-zA-Z]+)/', $line[2], $matches);
                 $item = $matches[1];
             }
             $result[$toNumbers[$key]] = $item;
