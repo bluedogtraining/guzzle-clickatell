@@ -5,6 +5,7 @@ namespace Bdt\Clickatell;
 use Guzzle\Common\Collection;
 use Guzzle\Service\Client;
 use Guzzle\Service\Description\ServiceDescription;
+use Guzzle\Http\Message\RequestInterface;
 
 /**
  * Client for interacting with the Clickatell HTTP API.
