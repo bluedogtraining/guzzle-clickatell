@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+* 2.0.5 (2015-05-12)
+    * Check for 'from' in client config, use when sending sms if found
+
 * 2.0.4 (2013-06-13)
     * Support Guzzle 3.7.0
     * Support Guzzle 3.6.0
