@@ -66,9 +66,19 @@ class ClickatellClient extends Client
      */
     public function sendMessage($to, $message)
     {
-        return $this->getCommand('SendMsg', array(
+        $config = $this->getConfig();
+        
+        $messageConfig = [
             'to'      => $to,
             'text' => $message,
-        ))->execute()->isSuccessful();
+        ];
+
+        // If a sender_id or 'from' is set, use it
+        if(!is_null($config->get('from')))
+        {
+            $messageConfig['from'] = $config->get('from');
+        }
+
+        return $this->getCommand('SendMsg', $messageConfig)->execute()->isSuccessful();
     }
 }
